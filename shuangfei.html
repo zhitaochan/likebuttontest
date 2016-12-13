@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>圣杯布局</title>
+  
+  <style>
+    
+    #content:after{
+      content: '';        /*8*/
+      display: block;     /*8*/
+      clear: both;        /*8*/
+    }
+    #content{
+  
+    }
+    .aside, .main, .extra{
+      float: left;         /*2*/
+    }
+    
+    .aside{
+      width: 100px;        /*1*/
+      height: 300px;       /*1*/
+      background: red;     /*1*/
+      
+      margin-left: -100%;  /*4*/
+
+    }
+    .extra{
+      width: 150px;        /*1*/
+      height: 300px;       /*1*/
+      background: yellow;  /*1*/
+      
+      margin-left: -150px; /*5*/
+
+      
+    }
+    .main{
+      /* background: blue;  */   /*第1步添加，第7步注释掉*/
+      /* height: 350px;  */      /*第1步添加，第7步注释掉*/
+      
+      width: 100%;         /*3*/
+    }
+    
+    .wrap{
+      margin-left: 100px;  /*6*/
+      margin-right: 150px; /*6*/
+      background: blue;    /*7*/
+      height: 350px;       /*7*/
+ 
+    }
+  
+  </style>
+  
+</head>
+<body>
+  <div id="content">
+    <div class="main">
+      <div class="wrap">main</div>
+    </div>
+    <div class="aside">aside</div>
+    <div class="extra">extra</div>
+  </div>
+
+</body>
+</html>
